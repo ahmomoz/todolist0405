@@ -88,7 +88,7 @@ const removeTodo = (todoId) => {
   todos.value = todos.value.filter(todo => todo.id !== todoId)
 }
 const removeAllTodo = () => {
-  todos.value = []
+  todos.value = todos.value.filter(todo => !todo.done)
 }
 
 watchEffect(() => {
